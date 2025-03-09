@@ -48,9 +48,9 @@ This meets the **Push_swap efficiency requirements** and demonstrates a well-opt
 ---
 
 ### **Expected Approach:**  
-1. **Small stacks (≤ 5 numbers)**: Use a simple sorting method (like brute-force sorting).  
-2. **Larger stacks (> 5 numbers)**: Implement an efficient sorting algorithm (like Quick Sort or Radix Sort, but adapted for two stacks).  
-
+1. **Small stack (3 numbers)**: Use a simple sorting method.
+2. **Small stacks (≤ 5 numbers)**: Use a simple sorting method (like brute-force sorting).  
+3. **Larger stacks (> 5 numbers)**: Implement an efficient sorting algorithm (like Quick Sort or Radix Sort, but adapted for two stacks).
 ---
 
 ### **Evaluation Criteria:**  

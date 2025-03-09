@@ -6,14 +6,14 @@
 /*   By: abdo <abdo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 00:59:01 by abdo              #+#    #+#             */
-/*   Updated: 2025/03/09 00:59:03 by abdo             ###   ########.fr       */
+/*   Updated: 2025/03/09 15:02:23 by abdo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-void	finish_rotation(stack **current_stack,
-						stack *cheapest_node, char stack_name)
+void	finish_rotation(t_stack **current_stack,
+						t_stack *cheapest_node, char stack_name)
 {
 	while (*current_stack != cheapest_node)
 	{
@@ -34,9 +34,9 @@ void	finish_rotation(stack **current_stack,
 	}
 }
 
-void	moves(stack **a, stack **b)
+void	moves(t_stack **a, t_stack **b)
 {
-	stack	*cheapest_node;
+	t_stack	*cheapest_node;
 
 	cheapest_node = find_cheapest(*b);
 	if (cheapest_node->is_in_first_half
@@ -50,7 +50,7 @@ void	moves(stack **a, stack **b)
 	pa(a, b);
 }
 
-void	set_and_move(stack **a, stack **b)
+void	set_and_move(t_stack **a, t_stack **b)
 {
 	while (*b)
 	{
@@ -59,9 +59,9 @@ void	set_and_move(stack **a, stack **b)
 	}
 }
 
-void	sort_all_moves(stack **a, stack **b)
+void	sort_all_moves(t_stack **a, t_stack **b)
 {
-	stack	*small_node;
+	t_stack	*small_node;
 
 	if (stack_size(*a) == 5)
 		sort_5(a, b);

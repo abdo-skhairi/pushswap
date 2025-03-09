@@ -6,16 +6,16 @@
 /*   By: abdo <abdo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 01:00:21 by abdo              #+#    #+#             */
-/*   Updated: 2025/03/09 01:00:21 by abdo             ###   ########.fr       */
+/*   Updated: 2025/03/09 14:48:58 by abdo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-int	is_duplicate(stack **a)
+int	is_duplicate(t_stack **a)
 {
-	stack	*first;
-	stack	*second;
+	t_stack	*first;
+	t_stack	*second;
 
 	if (a == NULL || *a == NULL)
 		return (0);
@@ -34,7 +34,7 @@ int	is_duplicate(stack **a)
 	return (0);
 }
 
-int	is_sorted(stack *a)
+int	is_sorted(t_stack *a)
 {
 	if (!a || !a->next)
 		return (1);
@@ -47,7 +47,7 @@ int	is_sorted(stack *a)
 	return (1);
 }
 
-int	is_higher(int value, stack *a)
+int	is_higher(int value, t_stack *a)
 {
 	a = a->next;
 	while (a)
@@ -59,7 +59,7 @@ int	is_higher(int value, stack *a)
 	return (1);
 }
 
-stack	*find_cheapest(stack *b)
+t_stack	*find_cheapest(t_stack *b)
 {
 	if (!b)
 		return (NULL);
@@ -72,9 +72,9 @@ stack	*find_cheapest(stack *b)
 	return (NULL);
 }
 
-stack	*find_smallest_node(stack *a)
+t_stack	*find_smallest_node(t_stack *a)
 {
-	stack	*smallest;
+	t_stack	*smallest;
 
 	smallest = a;
 	if (!a)

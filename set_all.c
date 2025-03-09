@@ -6,13 +6,13 @@
 /*   By: abdo <abdo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 00:59:10 by abdo              #+#    #+#             */
-/*   Updated: 2025/03/09 01:01:05 by abdo             ###   ########.fr       */
+/*   Updated: 2025/03/09 15:01:28 by abdo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-void	set_index_position(stack *stack)
+void	set_index_position(t_stack *stack)
 {
 	int	i;
 	int	center;
@@ -33,10 +33,10 @@ void	set_index_position(stack *stack)
 	}
 }
 
-void	set_target(stack *a, stack *b)
+void	set_target(t_stack *a, t_stack *b)
 {
-	stack	*current_in_a;
-	stack	*target_node;
+	t_stack	*current_in_a;
+	t_stack	*target_node;
 	long	target_value;
 
 	while (b)
@@ -61,7 +61,7 @@ void	set_target(stack *a, stack *b)
 	}
 }
 
-void	set_price(stack *a, stack *b)
+void	set_price(t_stack *a, t_stack *b)
 {
 	int	len_a;
 	int	len_b;
@@ -81,11 +81,11 @@ void	set_price(stack *a, stack *b)
 	}
 }
 
-void	set_cheap_node(stack *b)
+void	set_cheap_node(t_stack *b)
 {
 	long	cheap_value;
-	stack	*cheap_node;
-	stack	*temp;
+	t_stack	*cheap_node;
+	t_stack	*temp;
 
 	cheap_node = NULL;
 	cheap_value = LONG_MAX;
@@ -110,7 +110,7 @@ void	set_cheap_node(stack *b)
 		cheap_node->cheap = 1;
 }
 
-void	set_all_nodes(stack *a, stack *b)
+void	set_all_nodes(t_stack *a, t_stack *b)
 {
 	if (!a || !b)
 		return ;

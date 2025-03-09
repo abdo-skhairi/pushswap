@@ -6,7 +6,7 @@
 /*   By: abdo <abdo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 00:59:38 by abdo              #+#    #+#             */
-/*   Updated: 2025/03/09 01:57:11 by abdo             ###   ########.fr       */
+/*   Updated: 2025/03/09 15:00:02 by abdo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	check_errors(char	*str)
 	}
 }
 
-void	sorting_function(stack **a, stack **b)
+void	sorting_function(t_stack **a, t_stack **b)
 {
 	int	size;
 
@@ -67,8 +67,8 @@ int	main(int ac, char	**av)
 	int		i;
 	char	**str;
 	char	*temp;
-	stack	*a;
-	stack	*b;
+	t_stack	*a;
+	t_stack	*b;
 
 	if (ac < 2)
 		return (0);

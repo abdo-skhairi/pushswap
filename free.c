@@ -6,7 +6,7 @@
 /*   By: abdo <abdo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 01:00:08 by abdo              #+#    #+#             */
-/*   Updated: 2025/03/09 01:00:10 by abdo             ###   ########.fr       */
+/*   Updated: 2025/03/09 14:57:21 by abdo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	free_str_array(char **arr)
 	free(arr);
 }
 
-void	free_stack_utils(stack **b, stack	*current, stack	*next)
+void	free_stack_utils(t_stack **b, t_stack	*current, t_stack	*next)
 {
 	if (b)
 	{
@@ -40,10 +40,10 @@ void	free_stack_utils(stack **b, stack	*current, stack	*next)
 	}
 }
 
-void	free_stacks(stack **a, stack **b)
+void	free_stacks(t_stack **a, t_stack **b)
 {
-	stack	*current;
-	stack	*next;
+	t_stack	*current;
+	t_stack	*next;
 
 	if (a)
 	{

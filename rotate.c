@@ -6,16 +6,16 @@
 /*   By: abdo <abdo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 00:59:18 by abdo              #+#    #+#             */
-/*   Updated: 2025/03/09 00:59:23 by abdo             ###   ########.fr       */
+/*   Updated: 2025/03/09 15:00:53 by abdo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-static void	rotate(stack **stack1)
+static void	rotate(t_stack **stack1)
 {
-	stack	*temp1;
-	stack	*temp2;
+	t_stack	*temp1;
+	t_stack	*temp2;
 
 	if (!(*stack1) || !((*stack1)->next))
 		return ;
@@ -28,19 +28,19 @@ static void	rotate(stack **stack1)
 	temp1->next = NULL;
 }
 
-void	ra(stack **stack_a)
+void	ra(t_stack **stack_a)
 {
 	rotate(stack_a);
 	write(1, "ra\n", 3);
 }
 
-void	rb(stack	**stack_b)
+void	rb(t_stack	**stack_b)
 {
 	rotate(stack_b);
 	write(1, "rb\n", 3);
 }
 
-void	rr(stack **stack_a, stack **stack_b)
+void	rr(t_stack **stack_a, t_stack **stack_b)
 {
 	rotate(stack_a);
 	rotate(stack_b);

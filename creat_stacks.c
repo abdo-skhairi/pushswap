@@ -6,13 +6,13 @@
 /*   By: abdo <abdo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 01:00:14 by abdo              #+#    #+#             */
-/*   Updated: 2025/03/09 01:00:17 by abdo             ###   ########.fr       */
+/*   Updated: 2025/03/09 14:49:30 by abdo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-int	stack_size(stack *a)
+int	stack_size(t_stack *a)
 {
 	int	i;
 
@@ -25,11 +25,11 @@ int	stack_size(stack *a)
 	return (i);
 }
 
-stack	*new_node(int value)
+t_stack	*new_node(int value)
 {
-	stack	*node;
+	t_stack	*node;
 
-	node = (stack *)malloc(sizeof(stack));
+	node = (t_stack *)malloc(sizeof(t_stack));
 	if (!node)
 		return (NULL);
 	node->value = value;
@@ -37,10 +37,10 @@ stack	*new_node(int value)
 	return (node);
 }
 
-void	creat_stack_elements(stack **a, char **str2)
+void	creat_stack_elements(t_stack **a, char **str2)
 {
 	int		i;
-	stack	*tmp;
+	t_stack	*tmp;
 
 	i = 0;
 	if (str2[i])

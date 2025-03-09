@@ -6,13 +6,13 @@
 /*   By: abdo <abdo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 00:58:30 by abdo              #+#    #+#             */
-/*   Updated: 2025/03/09 00:58:34 by abdo             ###   ########.fr       */
+/*   Updated: 2025/03/09 15:02:47 by abdo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-void	sort_3(stack **a)
+void	sort_3(t_stack **a)
 {
 	if (!a)
 		return ;
@@ -24,7 +24,7 @@ void	sort_3(stack **a)
 		sa(a);
 }
 
-void	sort_5(stack **a, stack **b)
+void	sort_5(t_stack **a, t_stack **b)
 {
 	while (stack_size(*a) > 3)
 	{
@@ -34,7 +34,7 @@ void	sort_5(stack **a, stack **b)
 	}
 }
 
-void	rotate_both(stack **a, stack **b, stack *cheapest_node)
+void	rotate_both(t_stack **a, t_stack **b, t_stack *cheapest_node)
 {
 	while (*b != cheapest_node && *a != cheapest_node->target_node)
 		rr(a, b);
@@ -42,7 +42,7 @@ void	rotate_both(stack **a, stack **b, stack *cheapest_node)
 	set_index_position(*b);
 }
 
-void	reverse_rotate_both(stack **a, stack **b, stack *cheapest_node)
+void	reverse_rotate_both(t_stack **a, t_stack **b, t_stack *cheapest_node)
 {
 	while (*b != cheapest_node && *a != cheapest_node->target_node)
 		rrr(a, b);

@@ -6,16 +6,16 @@
 /*   By: abdo <abdo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 00:58:53 by abdo              #+#    #+#             */
-/*   Updated: 2025/03/09 00:58:56 by abdo             ###   ########.fr       */
+/*   Updated: 2025/03/09 15:05:04 by abdo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-static void	swap(stack **stack1)
+static void	swap(t_stack **stack1)
 {
-	stack	*first;
-	stack	*second;
+	t_stack	*first;
+	t_stack	*second;
 
 	if (*stack1 == NULL || (*stack1)->next == NULL)
 		return ;
@@ -26,19 +26,19 @@ static void	swap(stack **stack1)
 	(*stack1) = second;
 }
 
-void	sa(stack **stack_a)
+void	sa(t_stack **stack_a)
 {
 	swap(stack_a);
 	write(1, "sa\n", 3);
 }
 
-void	sb(stack **stack_b)
+void	sb(t_stack **stack_b)
 {
 	swap(stack_b);
 	write(1, "sb\n", 3);
 }
 
-void	ss(stack **stack_a, stack **stack_b)
+void	ss(t_stack **stack_a, t_stack **stack_b)
 {
 	swap(stack_a);
 	swap(stack_b);

@@ -6,13 +6,13 @@
 /*   By: abdo <abdo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 00:58:40 by abdo              #+#    #+#             */
-/*   Updated: 2025/03/09 00:58:44 by abdo             ###   ########.fr       */
+/*   Updated: 2025/03/09 15:04:19 by abdo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-static	size_t	ft_count(char const *s, char c)
+static size_t	ft_count(char const *s, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -40,10 +40,10 @@ static void	cfree(char **p)
 		free(p[i]);
 		i++;
 	}
-	free (p);
+	free(p);
 }
 
-static	char	**check(char **p, char const *s, char c)
+static char	**check(char **p, char const *s, char c)
 {
 	size_t	start;
 	size_t	end;

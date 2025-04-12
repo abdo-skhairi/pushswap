@@ -59,4 +59,11 @@ This meets the **Push_swap efficiency requirements** and demonstrates a well-opt
 ✅ Error handling.  
 ✅ Code quality (Norminette compliance).  
 
+## 📬 Contact Me
+
+- 📧 **Email:** skhairi.abderahmane@gmail.com  
+- 📸 **Instagram:** [@abdo.skh](https://instagram.com/abdo.skh)
+
+---
+
 This project is a great way to improve algorithmic thinking and learn about sorting optimizations in a restricted environment. 🚀
